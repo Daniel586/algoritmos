@@ -1,0 +1,104 @@
+#include "stdafx.h"
+
+int main()
+
+int B;
+int op,i,N,s;
+
+{
+
+int B;
+int op,i,N,s;
+
+
+   bandera=0;
+
+ do 
+ {
+
+	printf("\n ------> MENU DE OPCIONES <------ \n");
+	printf("\n");
+	printf("*********************************** \n");
+	printf(" (1) SUMA DE NUMEROS PARES HASTA N \n ");
+	printf(" (2) SUMA DE LOS PRIMEROS N PARES \n ");
+	printf(" (3) SUMA DE LOS PRIMEROS N PARES CON WHILE \n ");
+	printf(" SALIR \n\n\n");
+
+	printf(" DIGITE LA OPCION CORRECTA:");
+	scanf("%d",&op);
+
+	switch (op)
+	{
+	case'1' :
+
+		do{
+
+		printf("\n SUMA DE NUMEROS PARES HASTA N \n");
+		printf("\n INTRODUSCA EL VALOR DE N:");
+		scanf("%d",&N);
+		}
+		while(N>=0);
+
+		{
+			for(i=1;i<=N;i++)
+
+				if(i%2==0)
+				s=s+i;
+		}
+
+		printf("\n LA SUMA TOTAL DE LOS NUMEROS PARES HASTA N ES => ",s);
+
+		break;
+
+	case'2' :
+		
+		do{
+
+		printf("\n SUMA DE LOS PRIMEROS NUMEROS PARES HASTA N \n");
+		printf("\n INTRODUSCA EL VALOR DE N: ");
+		scanf("%d",&N);
+
+		}
+			while(N>=0);
+			{
+				for(i=0;i<N;i++)
+					s=s+2*i;
+			}
+
+
+		printf("\n LA SUMA TOTAL DE LOS PRIMEROS N NUMEROS PARES ES => ",s);
+
+		break;
+
+	case'3' :
+		
+		printf("\n SUMA DE LOS PRIMEROS NUMEROS N NUMEROS PARES, CON WHILE \n");
+		printf("\n INTRODUSCA EL VALOR DE N: ");
+		scanf("%d",&N);
+
+		  while(N>0);
+		  {
+			  for(i=1;i<=N;i++)
+				  if(i%2!=0)
+					  s=s+i;
+		  }
+
+
+		printf("\n LA SUMA TOTAL DE LOS N DIGITOS PARES ES => ");
+
+		break;
+
+
+	case'4' :
+		bandera=1;
+		break;
+
+		default :
+
+			printf("\n SELECCION INCORRECTA DIGITE ENTER \n");
+			break;
+	}
+
+ } while (B!=1);
+}
+
