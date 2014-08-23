@@ -1,0 +1,115 @@
+algoritmos
+==========
+
+// convert decimal.cpp : Defines the entry point for the console application.
+//ALUMNO: DANIEL CRISTIAL ECHEVERRIA JUSTINIANO
+
+    #include "stdafx.h"
+    #include <iostream>
+    using namespace std;
+     
+    int DecimalToBase(long int iDec, int numbase);
+    char cHexa[] = {'A','B','C','D','E','F'};
+    char result[100];
+     
+    int main(int argc, char *argv[])
+    {
+    int num, base;
+
+	printf("\n\n\");
+
+     printf(" \n INGRESE EL NUMERO DE BASE 10: "); 
+	 scanf("%d",&num);
+	
+      printf(" \n INGRESE LA BASE A LA QUE DESEA CONVERTIR: ");
+	  scanf("%d",&base);
+
+	  printf("\n\n\n\n NUMERO: ");
+
+
+     for(int x = 0; x < DecimalToBase(14, 2); x++)
+		 
+		 cout << result[x];
+
+	 printf("\n\n\n\n\n");
+	 
+     system("PAUSE");	
+     return 0;
+    }
+     
+    int DecimalToBase(long int iDec, int numbase)
+    {
+       char base_digits[16] =
+    {'0', '1', '2', '3', '4', '5', '6', '7',
+     '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
+     
+      int converted_number[64];
+      int next_digit, index=0, i=0;
+     
+      while (iDec != 0)
+      {
+    converted_number[index] = iDec % numbase;
+    iDec /= numbase;
+    ++index;
+      }
+      --index;
+      for(  ; index>=0; index--)
+      {
+    result[i] = (base_digits[converted_number[index]]);
+    i++;
+      }
+      return i;
+    }
+
+
+*******************************************************************************************
+*******************************************************************************************
+
+
+
+// prog 24 hrs.cpp : Defines the entry point for the console application.
+//ALUMNO: DANIEL CRISTIAL ECHEVERRIA JUSTINIANO
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "stdlib.h"
+#include "conio.h"
+
+void main()
+{
+	int hr1, min1, seg1;
+	int hr2, min2, seg2;
+	int hr3, min3, seg3;
+
+	int tiempo1, tiempo2, tiempo3;
+
+	printf("\n HORARIO INICIAL (EN FORMA HH:MM:SS):  ");
+	scanf("%d:%d:%d",&hr1, &min1, &seg1);
+
+	printf("\n\n EL TIEMPO TRANSCURRIDO EN FORMA (HH:MM:SS):  ");
+	scanf("%d:%d:%d", &hr2, &min2, &seg2);
+
+	tiempo1 = hr1*3600 + min1*60 + seg1;
+	tiempo2 = hr2*3600 + min2*60 + seg2;
+
+	tiempo3 = tiempo1 + tiempo2;
+
+	hr3 = tiempo3 /3600;
+
+	tiempo3 = tiempo3 % 3600;
+
+	min3 = tiempo3 / 60;
+
+	tiempo3 = tiempo3 %60;
+
+	seg3= tiempo3;
+
+	printf("\n\n HORARIO FINAL %d:%d:%d \n\n", hr3, min3, seg3);
+
+	getch();
+
+
+}
+
+
+	
